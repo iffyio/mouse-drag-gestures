@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+
+
+	"name": "Drag mouse gestures",
+	"description": "Open links and search quicker using drag gestures.
+	Drag links to open them in new tabs. Drag highlighted text to search.",
+	"version": "0.0.1",
+	"author": "Ifeanyi Ubah",
+	"homepage_url": "http://www.iffy.se",
+	"icons": { "16": "icon_16.png",
+				"48":"icon_48.png",
+				"128":"icon_48.png"},
+
+	"background": {"scripts": ["background.js"]},
+
+	"permissions": ["tabs"],
+
+	"content_scripts": [
+		{
+			"matches" : ["<all_urls>"],
+			"js" : [ "contentscript.js"]
+		}
+	]
+}
